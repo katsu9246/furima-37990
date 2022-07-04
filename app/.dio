@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="UfkWdmlpj0HbdyQggHF-" name="ページ1">
-        <mxGraphModel dx="1309" dy="804" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1445" dy="804" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -597,19 +597,19 @@
                 </mxCell>
                 <mxCell id="100" value="" style="endArrow=none;html=1;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="690" y="499.69" as="sourcePoint"/>
-                        <mxPoint x="740" y="499.69" as="targetPoint"/>
+                        <mxPoint x="690" y="507.58" as="sourcePoint"/>
+                        <mxPoint x="740" y="507.58" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="690" y="499.69"/>
+                            <mxPoint x="690" y="507.58"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="101" value="" style="endArrow=none;html=1;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="145.00000000000023" y="460" as="sourcePoint"/>
-                        <mxPoint x="195.00000000000023" y="460" as="targetPoint"/>
+                        <mxPoint x="145.00000000000023" y="470" as="sourcePoint"/>
+                        <mxPoint x="195.00000000000023" y="470" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="145" y="460"/>
+                            <mxPoint x="145" y="470"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -668,7 +668,7 @@
                     <mxGeometry x="509" y="623" width="90" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="144" value="belongs_to: purchases" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="501.99999999999994" y="820" width="140" height="20" as="geometry"/>
+                    <mxGeometry x="503.00999999999993" y="900" width="140" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="161" value="•last_name_kana" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;" parent="1" vertex="1">
                     <mxGeometry x="100" y="240" width="140" height="40" as="geometry">

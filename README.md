@@ -2,16 +2,16 @@
 
 ## users table
 
-| Column             | Type                | Options                   |
-|--------------------|---------------------|---------------------------|
-| first_name         | text                | null: false               |
-| last_name          | text                | null: false               |
-| first_name_kana    | text                | null: false               |
-| last_name_kana     | text                | null: false               |
-| nick_name          | text                | null: false               |
-| birthday           | string              | null: false               |
-| email              | string              | null: false, unique: true |
-| encrypted_password | string              | null: false               |
+| Column             | Type   | Options                   |
+|--------------------|--------|---------------------------|
+| first_name         | text   | null: false               |
+| last_name          | text   | null: false               |
+| first_name_kana    | text   | null: false               |
+| last_name_kana     | text   | null: false               |
+| nick_name          | text   | null: false               |
+| birthday           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
 
 ### Association
 
@@ -20,19 +20,19 @@
 
 ## items table
 
-| Column                              | Type       | Options                        |
-|-------------------------------------|------------|--------------------------------|
-| item_image                          | image      | null: false                    |
-| item_name                           | text       | null: false                    |
-| category                            | text       | null: false                    |
-| explanation                         | text       | null: false                    |
-| situation                           | text       | null: false                    |
-| delivery_charge                     | text       | null: false                    |
-| shipment_source                     | text       | null: false                    |
-| days_to_ship                        | text       | null: false                    |
-| price                               | string     | null: false                    |
-| delivery_change                     | string     | null: false                    |
-| user                                | references | null: false, foreign_key: true |
+| Column          | Type       | Options                        |
+|-----------------|------------|--------------------------------|
+| item_image      | image      | null: false                    |
+| item_name       | text       | null: false                    |
+| category        | text       | null: false                    |
+| explanation     | text       | null: false                    |
+| situation       | text       | null: false                    |
+| delivery_charge | text       | null: false                    |
+| shipment_source | text       | null: false                    |
+| days_to_ship    | text       | null: false                    |
+| price           | string     | null: false                    |
+| delivery_change | string     | null: false                    |
+| user            | references | null: false, foreign_key: true |
 
 ### Association
 
