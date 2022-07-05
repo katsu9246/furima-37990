@@ -30,26 +30,25 @@
 | shipment_source_id                  | integer    | null: false                    |
 | days_to_ship_id                     | integer    | null: false                    |
 | price                               | string     | null: false                    |
-| commission                          | string     | null: false                    |
 | user                                | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- has_many :purchases
+- has_one :purchase
 
 ## purchases table
 
 | Column        | Type       | Options                        |
 |---------------|------------|--------------------------------|
-| buyer         | string     | null: false                    |
+| user          | references | null: false, foreign_key: true |
 | item          | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - belongs_to :item
-- has_one    :adds
+- has_one    :add
 
 ## adds table
 
