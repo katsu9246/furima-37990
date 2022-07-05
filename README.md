@@ -36,7 +36,7 @@
 
 ### Association
 
-- belongs_to :user
+- belongs_to :users
 - has_many :purchases
 
 ## purchases table
@@ -50,8 +50,8 @@
 
 ### Association
 
-- belongs_to :user
-- belongs_to :item
+- belongs_to :users
+- belongs_to :items
 - has_one    :adds
 
 ## adds table
@@ -68,4 +68,4 @@
 
 ### Association
 
-- belongs_to :purchase
+- belongs_to :purchases
