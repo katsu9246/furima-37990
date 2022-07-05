@@ -4,12 +4,12 @@
 
 | Column             | Type                | Options                   |
 |--------------------|---------------------|---------------------------|
-| first_name         | text                | null: false               |
-| last_name          | text                | null: false               |
-| first_name_kana    | text                | null: false               |
-| last_name_kana     | text                | null: false               |
-| nick_name          | text                | null: false               |
-| birthday           | string              | null: false               |
+| first_name         | string              | null: false               |
+| last_name          | string              | null: false               |
+| first_name_kana    | string              | null: false               |
+| last_name_kana     | string              | null: false               |
+| nick_name          | string              | null: false               |
+| birthday           | date                | null: false               |
 | email              | string              | null: false, unique: true |
 | encrypted_password | string              | null: false               |
 
@@ -22,16 +22,15 @@
 
 | Column                              | Type       | Options                        |
 |-------------------------------------|------------|--------------------------------|
-| item_image                          | image      | null: false                    |
-| item_name                           | text       | null: false                    |
-| category                            | text       | null: false                    |
+| item_name                           | string     | null: false                    |
+| category_id                         | integer    | null: false                    |
 | explanation                         | text       | null: false                    |
-| situation                           | text       | null: false                    |
-| delivery_charge                     | text       | null: false                    |
-| shipment_source                     | text       | null: false                    |
-| days_to_ship                        | text       | null: false                    |
+| situation_id                        | integer    | null: false                    |
+| delivery_charge_id                  | integer    | null: false                    |
+| shipment_source_id                  | integer    | null: false                    |
+| days_to_ship_id                     | integer    | null: false                    |
 | price                               | string     | null: false                    |
-| delivery_change                     | string     | null: false                    |
+| commission                          | string     | null: false                    |
 | user                                | references | null: false, foreign_key: true |
 
 ### Association
@@ -43,9 +42,7 @@
 
 | Column        | Type       | Options                        |
 |---------------|------------|--------------------------------|
-| buyer         | text       | null: false                    |
-| payment_method| text       | null: false                    |
-| user          | references | null: false, foreign_key: true |
+| buyer         | string     | null: false                    |
 | item          | references | null: false, foreign_key: true |
 
 ### Association
@@ -56,15 +53,15 @@
 
 ## adds table
 
-| Column         | Type       | Options                        |
-|----------------|------------|--------------------------------|
-| post_code      | string     | null: false                    |
-| prefectures    | text       | null: false                    |
-| municipalities | text       | null: false                    |
-| address        | text       | null: false                    |
-| building_name  | text       | null: false                    |
-| phone_number   | string     | null: false                    |
-| purchase       | references | null: false, foreign_key: true |
+| Column            | Type       | Options                        |
+|-------------------|------------|--------------------------------|
+| post_code         | string     | null: false                    |
+| shipment_source_id| integer    | null: false                    |
+| municipalities    | string     | null: false                    |
+| address           | string     | null: false                    |
+| building_name     | string     |                                |
+| phone_number      | string     | null: false                    |
+| purchase          | references | null: false, foreign_key: true |
 
 ### Association
 
