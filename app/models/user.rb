@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # has_many :items
+  has_many :items
 
   validates :first_name, presence: true, format: {with: /\A[ぁ-んァ-ヶ一-龥]+\z/ }# ここがユーザー本名全角かな、カナ、漢字の正規表現
   validates :last_name, presence: true, format: {with: /\A[ぁ-んァ-ヶ一-龥]+\z/ }# ここがユーザー本名全角かな、カナ、漢字の正規表現
