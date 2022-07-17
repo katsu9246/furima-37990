@@ -2,10 +2,11 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
 
   belongs_to :user
-  belongs_to :Category
-  belongs_to :Situation
-  belongs_to :Delivery_charge
-  belongs_to :Shipment_source
+  belongs_to :category
+  belongs_to :situation
+  belongs_to :delivery_charge
+  belongs_to :shipment_source
+  belongs_to :days_to_ship
   has_one_attached :image
   with_options presence: true, format: { with: /\A[0-9]+\z/ } do
     validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 },
@@ -20,7 +21,6 @@ class Item < ApplicationRecord
   validates :shipment_source_id, presence: true
   validates :days_to_ship_id, presence: true
   validates :price, presence: true
-  validates :user, presence: true
   validates :category_id, presence: true
   validates :situation_id, presence: true
   validates :delivery_charge_id, presence: true
