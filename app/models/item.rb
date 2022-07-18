@@ -31,4 +31,10 @@ class Item < ApplicationRecord
   validates :delivery_charge_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :shipment_source_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :days_to_ship_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :item, presence: true, unless: :was_attached?
+
+  def was_attached?
+    self.image.attached?
+  end
+  
 end
