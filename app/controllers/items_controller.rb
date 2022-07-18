@@ -23,6 +23,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    if @item.user != current_user
+      redirect_to  items_path
+    end
   end
 
   def update
