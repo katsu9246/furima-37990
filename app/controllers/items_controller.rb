@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :show, :update, :destroy]
   before_action :set_conditions, only: [:edit, :update, :destroy]
+  before_action :purchase_conditions, only: [:create, :edit]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -53,5 +54,9 @@ class ItemsController < ApplicationController
 
   def set_conditions
     redirect_to  items_path if @item.user != current_user 
+  end
+  
+  def purchase_conditions
+    redirect_to items_path if @item.user_id == current_user.id || @item.purchase != nil
   end
 end
