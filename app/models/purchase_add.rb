@@ -1,7 +1,7 @@
 class PurchaseAdd
   include ActiveModel::Model
   attr_accessor :post_code, :shipment_source_id, :municipalities, :address, :building_name, 
-               :phone_number, :user_id, :item_id
+               :phone_number, :user_id, :item_id, :token
     #validates :card_number, presence: true, format: { with: /\A(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6011[0-9]{12}|3(?:0[0-5]|[68][0-9])[0-9]{11}|3[47][0-9]{13})\z/, message: "is invalid" }
     
     #validates :cvc_code, presence: true, format: { with: /\A\d{3,4}\z/, message: "is invalid" }
