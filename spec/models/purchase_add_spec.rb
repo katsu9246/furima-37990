@@ -4,7 +4,6 @@ RSpec.describe PurchaseAdd, type: :model do
   before do
   user = FactoryBot.create(:user)
   item = FactoryBot.create(:item)
-  #purchase = FactoryBot.create(:purchase)
   @purchase_add = FactoryBot.build(:purchase_add, user_id: user.id, item_id: item.id)
   end
   context '購入できるとき' do
