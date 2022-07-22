@@ -10,6 +10,10 @@ RSpec.describe Add, type: :model do
     it '全ての項目が正しく入力されていれば保存できること' do
       expect(@add).to be_valid
     end
+    it '建物名が存在しなくても登録できること' do
+      @add.building_name = ""
+      expect(@add).to be_valid
+    end
   end
   context '保存できないとき' do
     it '購買情報が紐付いていなければ保存できないこと' do
@@ -54,6 +58,16 @@ RSpec.describe Add, type: :model do
     end
     it '電話番号にハイフンがある場合は保存できないこと' do
       @add.phone_number = '090-1234-5678'
+      @add.valid?
+      expect(@add.errors.full_messages).to include("Phone number is invalid")
+    end
+    it '電話番号が９桁以下の場合は保存できないこと' do
+      @add.phone_number = '090123456'
+      @add.valid?
+      expect(@add.errors.full_messages).to include("Phone number is invalid")
+    end
+    it '電話番号１２桁以上の場合は保存できないこと' do
+      @add.phone_number = '090123456789'
       @add.valid?
       expect(@add.errors.full_messages).to include("Phone number is invalid")
     end

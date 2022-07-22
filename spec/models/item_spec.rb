@@ -2,8 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Item, type: :model do
   before do
-    @item = FactoryBot.create(:item)
-    sleep(1)
+    @item = FactoryBot.build(:item)
   end
   context '出品ができるとき' do
     it '全ての項目の入力が存在すれば登録できること' do
