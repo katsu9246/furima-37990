@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
           currency: 'jpy'                 # 通貨の種類（日本円）
         )
         @purchase_add.save
-        redirect_to items_path
+        redirect_to items_path(@item.user_id)
       else
         render :index
       end

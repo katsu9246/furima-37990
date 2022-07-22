@@ -15,6 +15,6 @@ class PurchaseAdd
     purchase = Purchase.create(user_id: user_id, item_id: item_id)
     # 住所を保存する
     # 【学習メモ】purchas_idには、変数purchaseのidと指定する
-    PurchaseAdd.create(post_code: post_code, shipment_source_id: shipment_source_id, municipalities: municipalities, address: address, building_name: building_name, phone_number: phone_number, purchase_id: purchase.id)
+    Add.create(post_code: post_code, shipment_source_id: shipment_source_id, municipalities: municipalities, address: address, building_name: building_name, phone_number: phone_number, purchase_id: purchase.id)
   end
 end
