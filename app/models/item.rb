@@ -14,15 +14,10 @@ class Item < ApplicationRecord
                       presence: { message: "can't be blank" }
   end
 
+  validates :image, presence: true
   validates :item_name, presence: true, length: { maximum: 40, message: "must be less than or equal to 40" }
   validates :category_id, presence: true
   validates :explanation, presence: true, length: { maximum: 1000, message: "must be less than or equal to 1_000" }
-  validates :situation_id, presence: true
-  validates :delivery_charge_id, presence: true
-  validates :shipment_source_id, presence: true
-  validates :days_to_ship_id, presence: true
-  validates :price, presence: true
-  validates :category_id, presence: true
   validates :situation_id, presence: true
   validates :delivery_charge_id, presence: true
   validates :shipment_source_id, presence: true
