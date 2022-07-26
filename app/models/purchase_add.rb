@@ -3,11 +3,11 @@ class PurchaseAdd
   attr_accessor :post_code, :shipment_source_id, :municipalities, :address, :building_name, 
                :phone_number, :user_id, :item_id, :token
     with_options presence: true do
-      validates :post_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "には「-」を入れてください"}
+      validates :post_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "には「-」を入力する必要があります"}
       validates :shipment_source_id, numericality: { other_than: 1, message: "を選択してください" }
       validates :municipalities
       validates :address
-      validates :phone_number, format: { with: /\A\d{10,11}\z/, message: "は半角数字（ハイフンなし）で入力してください" }
+      validates :phone_number, format: { with: /\A\d{10,11}\z/, message: "は半角数字（ハイフンなし）で入力する必要があります" }
       validates :token
       validates :user_id
       validates :item_id
